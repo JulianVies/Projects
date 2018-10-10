@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+:root{
+  --bg-color:#eee;
+  --banner-color:#333;
+  --btn-hover-color:#f4f4f4;
+  --btn-border-color:#ccc;
+  --subtitle-color:#888;
+}
+*{
+  font-family: 'Roboto COndensed', sans-serif;
+}
+
+body{
+  background: var(--bg-color);
+  margin:0;
+  padding:0;
+}
+
+.wrapper{
+    background: white;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1),
+    -30px 0px 40px rgba(0, 0, 0, 0.1);
+}
+
+/*OPENING WALL HEADER*/
+
+header{
+  display: flex;
+  justify-content: center;
+}
+
+header #open-text{
+  flex-basis: 50%;
+  text-align: center;
+}
+header #open-img{
+  background: url(../images/opening-photo.png) no-repeat center/cover;
+  width: 300px;
+  height: 100vh;
+  flex-basis: 50%;
+}
+
+header #open-text h2{
+  margin:auto;
+  width: 300px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 40px;
+  padding-top: 200px;
+}
+
+header #open-text p.subtitle{
+  color:var(--subtitle-color);
+  margin:0 auto;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+}
+
+.btn-white{
+  display: block;
+  margin: 35px auto;
+  text-decoration: none;
+  color:black;
+  padding:17px;
+  border: var(--btn-border-color) 1px solid;
+  width: 135px;
+  border-radius: 30px;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 35px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.btn-black {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.btn-black:hover {
+    background-color: #555555;
+    color: white;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 5px 30px 0 rgba(0,0,0,0.19);
+}
+
+header #open-text a.btn-white:hover{
+  background: var(--btn-hover-color);
+}
+
+/*SECTION BANNER*/
+
+#banner{
+  background: var(--banner-color);
+  margin: 0;
+  padding-top:30px;
+  text-align: center;
+  height: 45px;
+}
+
+#banner p{
+  margin: 0px auto;
+  padding: 0px 10px;
+  width: 80px;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  border-left: var(--bg-color) 1px dotted;
+  border-right:  var(--bg-color) 1px dotted;
+}
+
+/*MAIN GALLERY*/
+
+#gallery ul{
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+}
+
+#gallery li{
+  padding:0;
+}
+#gallery li img{
+  width: 100%;
+}
+
+#gallery li .photo-desc{
+  background: white;
+  margin-top:-4px;
+  height: 115px;
+}
+
+#gallery li .photo-desc h4{
+  margin:0;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+
+#gallery li .photo-desc p{
+  margin:0;
+  padding-top:15px;
+  text-align: center;
+}
+
+/*FOOTER*/
+footer{
+  text-align: center;
+}
+
+footer ul{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  padding-bottom:40px;
+}
+
+footer ul li{
+  margin-bottom:10px;
+}
+
+footer ul li h2{
+  font-size: 40px;
+}
+
+footer ul li span.bold{
+  font-weight: bold;
+}
+
+/*MOBILE MODE*/
+
+@media only screen and (max-width:500px){
+  .wrapper{
+    min-width: 0px;
+    width: 100%;
+  }
+  header{
+    flex-direction: column;
+  }
+  header #open-img{
+    height: 400px;
+    width: 100%;
+  }
+  header #open-text h2{
+    padding-top: 70px;
+  }
